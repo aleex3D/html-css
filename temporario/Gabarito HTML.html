@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href=""></a>
+<!-- 
+    Por padrão, sempre que um visitante clique em um 
+hyperlink, o site de destino abre na mesma janela do site 
+que continha esse link. Ou seja, o conteúdo anterior vai 
+deixar de ser exibido para mostrar o novo conteúdo
+-->
+<!-- 
+‣ _blank nova janela em branco 
+
+‣ _self vai abrir o link na janela atual (padrão) 
+
+‣ _top vai desfazer todos os frames e abrir o destino no navegador completo 
+
+‣ _parent similar ao uso do _top em uma referência à janela mãe 
+
+‣ nome-do-frame caso esteja usando frames, indicar o nome da janela a abrir
+-->
+<!--
+Aqui vão alguns media types bem usados no nosso dia-a-dia: 
+‣ application/zip ‣ text/html 
+‣ text/javascript ‣ text/css 
+‣ video/mp4 ‣ video/H264 ‣ video/JPEG
+‣ audio/aac ‣ audio/mpeg ‣ font/ttf 
+‣ image/jpeg ‣ image/png 
+-->
+<!---->
+
+<audio src="midia/iceefire-kingcanyon.mp3" controls autoplay></audio>
+<!--TAG audio | scr, pra localizar o arquivo | controls, pro painel de controle do audio aparece | autoplay, pra reproduzir automaticamente (nem todos navegadores aceitam essa tag)-->
+outra forma diferente de fazer isso também é com:
+<audio preload="metadata" controls loop>
+    <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+</audio>
+
+Adicionando vídeos
+<video width="500" poster="" controls autoplay loop>
+    <source src="midia/Meuvideo.mp4" type="video/mp4">
+    <source src="midia/Meuvideo.webm" type="video/webm">
+    <source src="midia/Meuvideo.ogv" type="viddeo/ogg">
+    <!--várias tentativas de compatibilidade-->
+    <p>Seu navegador não tem compatibilidade com o reprodutor de vídeos.</p>
+</video>
+Adicionar vídeos a internet <!--RECOMANDADO-->
+<iframe width="560" height="300" src="aqui você vai em compartilhar no vídeo no youtube e depois incorporar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Parâmetros:
+
+   height	->	altura
+   width	->	largura
+   border	->	borda
+   padding	->	preenchimento / espaçamento interno em volta do texto, separando da borda
+   margin	->	espaçamento externo em volta da borda
+   outline	->	contorno externo em volta da borda
+
+Tipos de Caixas:
+
+ -  box-level:  pula pra linha de baixo, se iniciando em uma nova linha, ocupa a largura inteira da janela (100% do view port) e ao fim, pula mais uma linha, antes de começar o novo conteúdo.
+
+	ex:	<div>	 	<h1>	 	<p>	 	       <main>
+		<header>	<nav>		<article>	       <aside>
+		<footer>	        <form>	        <video>	
+
+ -  inline-level: inicia a caixa na mesma linha onde termina o texto, tem tamanho suficiente para conter o conteúdo e ao fim, o texto continua na mesma linha após a caixa.
+
+	ex:	<span>	        <a>		        <code>	        <small>
+		<strong>	<em>		<sup>		<sub>
+		<label>	        <button>	<input>	        <select>
+
+         ----------
+
+Shorthand básico:
+
+box-shadow: desl. horizontal, desl. vertical, espalhamento, cor da sombra;
+
+ex:	box-shadow: 1px 1px 1px black;
+
+ - Após declarado o box-shadow com quaisquer valores no VS Code, o DevTools do Chrome pode ser útil para editar/acrescentar parâmetros de sombra, indo na parte de html, clicando na tag em questão e ajustando os parâmetros no shadow editor.
+
+Shorthand completo:
+
+ - Pode ser adicionado o parâmetro 'inset' na frente dos demais, no shorthand,  caso queira ter uma sombra interna.
+ - Pode ser adicionado um valor para o alcance da sombra (spread), antes da cor no shorthand.
+
+	ex:	box-shadow: inset 5px 3px 7px 1px rgba(0, 0, 0, 0.493);
+</body>
+</html>

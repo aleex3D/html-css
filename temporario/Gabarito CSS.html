@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        @charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom, #73ad9b 30%, #008F8C)
+}
+main {
+    background-color: #ffffff52; /*fundo da main*/
+    color: white; /*deixando a cor do meu texto da main como branca*/
+    border-radius: 10px; /*arredondando o canto da main*/
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.336); /*sombra da div */
+    width: 500px; /*largura da main*/
+    padding: 10px; /*para dar um espaçamento do canto da div*/
+    margin: auto; /*centralizando automaticamente*/
+    height: auto; /*ajustando a altura pra automático para não dar problema com o body*/
+}
+h1 {
+    text-align: center;
+    color: #0c2022;
+    text-shadow: 1px 1px 2px rgba(10, 40, 41, 0.452);
+}
+h2 {
+    color: #193C40;
+}
+p {
+    text-align: justify; /*alinhando texto do parágrafo*/
+    color: #193C40;
+}
+    </style>
+</head>
+<body>
+
+main  -> 	div especial, indica que o conteúdo é principal
+
+width	->	largura da caixa
+        
+padding	->	espaço lateral do texto dentro da caixa
+        
+margin	->	margem do texto (auto, 3px, ...) 
+        
+text-align	->	alinhamento do texto (center, end, justify, ...)
+        
+border-radius	-> cantos da caixa arredondados
+        
+box-shadow / text-shadow	->	sombra da caixa
+        
+            
+- parâmetros: tam. sombra p/ lado, tam. sombra p/ baixo, espalhamento, cor;
+        
+            
+x:	box-shadow: 5px 5px 15px rgba(138, 111, 95, 0.616);
+    text-shadow: 1px 1px 2px rgba(129, 78, 5, 0.733);
+
+Medidas Absolutas: 
+
+cm, mm, in, px, pt, pc
+            
+Medidas Relativas:
+                        
+    em	->	relativo ao tamanho natural da fonte (16px)
+    ex	->	relativo a altura x da fonte
+    rem	->	tipo em, mas relativo a fonte configurada no body
+    w	->	relativo a largura da view port
+    vh	->	relativo a altura da view port
+    %	->	porcentagem
+            
+<!--Recomendação w3c:  "px" ou "em"-->
+            
+<!--Altura padrão:  16px ou 1em-->
+
+Peso (negrito):	
+
+- fonte mais cheia (negrito) ou fina
+- não serve para fontes simples (arial, verdana, times,...)
+- serve pra fontes como Work Sans (import google)
+   
+font-weight: nome ou número;	    
+   
+nome:	- lighter		número:	- 100   - 500   - 900
+        - normal				- 200   - 600
+        - bold				- 300   - 700
+        - bolder				- 400   - 800
+   
+   
+Estilo (itálico):
+   
+    font-style: valor;		valor:  - normal
+                                  - italic
+   
+Decoração (sublinhado):
+   
+    text-decoration: underline;
+   
+   
+   Shorthand font: simplificando fontes.
+   
+Ex:	font-family: 'Work Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+    font-style: italic;
+   
+Simplificando:
+   
+    font:  italic  bolder  3em  'Work Sans', sans-serif;
+   
+- A sequência deve ser:	
+   
+    font-style   ->   font-weight   ->   font-size   ->   font-family;
+   
+- Não precisa ter todas as propriedades, mas a sequência deve ser seguida;
+   
+Ex:		font:  bold  2em  'Work Sans';
+
+Fontes url/scr
+<style>
+    @font-face {
+        font-family: 'Roboto Condensed', sans-serif;
+        src: url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono&display=swap);
+    }
+</style>
+<style>
+    @font-face {
+        font-family: 'Love';
+        src: url('fonts/love larry ttf.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        /*Aqui estamos adicionando e fazendo configuração das fontes inseridas diretamente de um arquivo no local
+        Sem isso daqui a fonte funcionará*/
+                /* Tipos de Format()
+                - opentype (otf) 
+                - truetype (ttf)
+                - embedded-opentype
+                - truetype-aat (Apple Advanced Typography)
+                - svg*/
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1 {
+        font-family: 'Love', Times, serif; 
+        /*Aqui está adicionando a fonte criada lá em cima a uma família*/
+        font-size: 3em;
+    }
+
+    Parâmetros:
+
+    height	->	altura
+    width	->	largura
+    border	->	borda
+    padding	->	preenchimento / espaçamento interno em volta do texto, separando da borda
+    margin	->	espaçamento externo em volta da borda
+    outline	->	contorno externo em volta da borda
+
+    Tipos de Caixas:
+
+    -  box-level:  pula pra linha de baixo, se iniciando em uma nova linha, ocupa a largura inteira da janela (100% do view port) e ao fim, pula mais uma linha, antes de começar o novo conteúdo.
+
+        ex:	<div>	 	<h1>	 	<p>	 	       <main>
+            <header>	<nav>		<article>	       <aside>
+            <footer>	        <form>	        <video>	
+
+    -  inline-level: inicia a caixa na mesma linha onde termina o texto, tem tamanho suficiente para conter o conteúdo e ao fim, o texto continua na mesma linha após a caixa.
+
+	ex:	<span>	        <a>		                <code>	        <small>
+		<strong>	<em>		<sup>		<sub>
+		<label>	        <button>	<input>	        <select>
+
+         ----------
+
+        Shorthand básico:
+
+        box-shadow: desl. horizontal, desl. vertical, espalhamento, cor da sombra;
+
+        ex:	box-shadow: 1px 1px 1px black;
+
+        - Após declarado o box-shadow com quaisquer valores no VS Code, o DevTools do Chrome pode ser útil para editar/acrescentar parâmetros de sombra, indo na parte de html, clicando na tag em questão e ajustando os parâmetros no shadow editor.
+
+        Shorthand completo:
+
+        - Pode ser adicionado o parâmetro 'inset' na frente dos demais, no shorthand,  caso queira ter uma sombra interna.
+        - Pode ser adicionado um valor para o alcance da sombra (spread), antes da cor no shorthand.
+
+        ex:	box-shadow: inset 5px 3px 7px 1px rgba(0, 0, 0, 0.493);
+        No HTML, criaremos dentro do "body" a estrutura do projeto, inspirada no mock que prototipamos anteriormente... Basicamente, a organização das Grouping Tags SEMÂNTICAS do projeto foi a seguinte:
+	
+        Estrutura básica do HTML do projeto:
+
+        <header>
+            <h1></h1>
+            <p></p>
+        </header>
+
+        <nav>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </nav>
+
+        <main>
+            <article>
+                <aside>
+                
+                </aside>
+            </article>
+        </main>
+
+        <footer>
+            <p></p>
+        </footer>
+
+        Tome muito cuidado na hora de montar a estrutura HTML , cuidado para não colocar as tags do lado de fora ou no lugar errado... Se você errar no HTML e os seus blocos não estão com a hierarquia certa, não adianta tentar formatar os estilos com CSS já que o HTML estará errado...
+
+        IMPORTANTE: É fundamental que um aspirante a desenvolvedor/programador mantenha o seu código sempre bem arrumado, a INDENTAÇÃO é muito importante!
+
+        Após construir a estrutura do seu site com as Grouping Tags Semânticas acima, o nosso conteúdo estará aglomerado e sem formatação, mas já estará SEMÂNTICAMENTE ORGANIZADO em caixas com uma estrutura hierárquica... Por hora não teremos efeitos visuais evidentes, mas já teremos um efeito puramente semântico da organização das nossas caixas, que serão modeladas, formatadas e estilizadas com CSS .
+
+        Já na parte do " head ", inserimos o favicon logo abaixo de "title"... Como temos uma pasta para imagens e fontes, e estamos elaborando um projeto, é importante mantermos os nossos arquivos organizados... Por isso CRIAMOS UMA PASTA ( "estilos" ) para armazenar o nosso documento CSS , que será externo ( Você pode criar a pasta "estilos" pelo próprio VSC ou no Explorador de Arquivos do projeto )
+
+        Já no nosso documento CSS a regra @charset "UTF-8" foi inserida no início do código (Regra de codificação de caracteres utilizado no documento)
+
+        Para testar se o arquivo CSS que criamos está funcionando, modifique a cor de fundo do corpo da página com a propriedade "background-color", se o corpo mudar de cor o nosso CSS está linkado e tudo funcionando como deveria.
+        Variáveis:	toda variável em CSS inicia com   --
+
+        Pseudoclasse   :root	->	raiz da árvore do documento.
+
+	    - Tudo que for definido dentro, servirá para o documento todo.
+
+        Ex:	Salvando variáveis de cores e fontes
+
+	    :root {
+    		--cor0: #c5ebd6;
+    		--cor1: #83e1ad;
+    		--cor2: #3ddc84;
+   	 	    --cor3: #2fa866;
+    		--cor4: #1a5c37;
+    		--cor5: #063d1e;
+
+		--fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+   		--fonte-destaque: 'Bebas Neue', cursive;
+    		--fonte-android: 'Android', cursive;
+	}
+</style>
+</body>
+</html>
