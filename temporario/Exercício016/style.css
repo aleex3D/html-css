@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom, #73ad9b 30%, #008F8C)
+}
+main {
+    background-color: #ffffff52; /*fundo da main*/
+    color: white; /*deixando a cor do meu texto da main como branca*/
+    border-radius: 10px; /*arredondando o canto da main*/
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.336); /*sombra da div */
+    width: 500px; /*largura da main*/
+    padding: 10px; /*para dar um espaçamento do canto da div*/
+    margin: auto; /*centralizando automaticamente*/
+    height: auto; /*ajustando a altura pra automático para não dar problema com o body*/
+}
+h1 {
+    text-align: center;
+    color: #0c2022;
+    text-shadow: 1px 1px 2px rgba(10, 40, 41, 0.452);
+}
+h2 {
+    color: #193C40;
+}
+p {
+    text-align: justify; /*alinhando texto do parágrafo*/
+    color: #193C40;
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*todo id é representado com # no CSS
+  toda class é representada com . no CSS*/
+body {
+    background-color: rgb(215, 245, 215);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*<h1> padronizado*/
+h1 {
+    color: #203120;
+}
+/*Aqui vamos modificar o <h1> exclusivamente para a indentidade "principal"*/
+#principal {
+    text-align: center;
+    background-color: #3B2D23;
+    color: #d7f5d7;
+}
+h2 {
+    color: #578657;
+}
+.basico {
+    color: #458F6F;
+    font-weight: bold;
+}
+.intermediario {
+    color: #CCC529;
+}
+.avancado {
+    color: #993232;
+}
