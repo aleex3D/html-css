@@ -14,7 +14,7 @@ font-family: 'Sriracha', cursive; */
     text-decoration: none;
 }
 body {
-    background: black url(imagens/background001.jpg) center center no-repeat fixed;
+    background: black url(imagens/background001.jpg) center right no-repeat fixed;
     background-size: cover;
 }
 header {
@@ -31,37 +31,36 @@ header > h1 {
 }
 header > p {
     color: #f0f8ff;
+    display: inline-block;
     font-family: var(--fontpadrao);
-    font-size: 20px;
+    font-size: 17px;
 }
 p {
     font-family: var(--fonttexto);
 }
 article p {
-    font-size: 2.3vw;
-    display: inline-block;
     max-width: 200px;
     max-height: 400px;
+    display: inline-block;
+    margin: 17px 13px 17px 13px;
 }
 .conteudo1 {
     background-color: #f0f8ff;
-    height: ;
-    width: 100%;
     padding: 50px;
+    display: block;
+
 }
 .conteudo2 {
     color: #f0f8ff;
     background-color: #0000004d;
-    height: 30%;
-    padding: 50px;
+    padding: 40px;
     display: inline-block;
-    /* overflow: auto; */
     margin: 20px 15px 20px 15px;
 }
 .texto {
     font-size: 1.3em;
     line-height: 1.5;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.10em;
 }
 footer {
     color: #ffffff;
