@@ -14,7 +14,6 @@ font-family: 'Sriracha', cursive; */
     text-decoration: none;
 }
 body {
-    background: black url(imagens/background001.jpg) center right no-repeat fixed;
     background-size: cover;
 }
 header {
@@ -45,22 +44,21 @@ article p {
     margin: 17px 13px 17px 13px;
 }
 .conteudo1 {
-    background-color: #f0f8ff;
-    padding: 50px;
-    display: block;
-
+    box-shadow: 5px 0px 0px 0px;
 }
 .conteudo2 {
     color: #f0f8ff;
-    background-color: #0000004d;
-    padding: 40px;
-    display: inline-block;
-    margin: 20px 15px 20px 15px;
+    background: black url(imagens/background001.jpg) center right no-repeat fixed;
+}
+.conteudo3 {
+    color: #f0f8ff;
+    background: black url(imagens/background002.jpg) center right no-repeat fixed;
 }
 .texto {
     font-size: 1.3em;
     line-height: 1.5;
     letter-spacing: 0.10em;
+    padding: 40px;
 }
 footer {
     color: #ffffff;
