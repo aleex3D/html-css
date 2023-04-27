@@ -11,21 +11,20 @@ font-family: 'Sriracha', cursive; */
 * {
     margin: 0px;
     padding: 0px;
-    text-decoration: none;
 }
 body {
     background-size: cover;
 }
 header {
     background-color: #000000;
-    font-weight: normal;
+    font-variant: small-caps;
     text-align: center;
     padding: 10% 10%;
 }
 header > h1 {
     color: aliceblue;
     font-family: var(--fontdestaque);
-    font-size: 9vw;
+    font-size: 9vh;
     position: relative;
 }
 header > p {
