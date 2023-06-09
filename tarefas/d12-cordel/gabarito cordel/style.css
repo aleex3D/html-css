@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+/*@importei duas fontes separadas no googlefonts e criei um var em :root pra usar cada fonte*/
+:root {
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2:'Passion One', cursive;
+    --font3: 'Sriracha', cursive;
+}
+/* Criei uma regra pra resetar */
 * {
     margin: 0px;
     padding: 0px;
@@ -7,6 +16,7 @@
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--font1);
 }
 header {
     background-color: black;
@@ -17,11 +27,13 @@ header > h1 {
     padding-top: 50px;
     /* text-transform: uppercase; */
     font-variant: small-caps;
+    font-family: var(--font2);
+    font-size: 10vw;
 }
 header > p {
     padding-bottom: 50px;
 }
-header a, footer a {
+header a, footer a { /*links do header e footer receberão isso: */
     color: white;
     text-decoration: none;
     font-weight: bolder;
@@ -29,11 +41,16 @@ header a, footer a {
 header a:hover, footer a:hover {
     text-decoration: underline;
 }
-section {
+section { /*é sempre melhor colocar as definições CSS dentro das divs pois assim você configura geral ao invés de um de cada*/
     padding-top: 10vh;
     padding-bottom: 10vh;
     padding-left: 30px;
     line-height: 2em; /* serve pra dar espaçamento entre as palavras */
+    font-family: var(--font3);
+    font-size: 3.5vw; /*viewwidth se ajusta a largura da tela*/
+}
+section > p {
+    padding-bottom: 2em;
 }
 section.branco {
     background-color: aliceblue;
@@ -42,16 +59,28 @@ section.branco {
 section.imagem {
     background-color: rgb(41, 41, 41);
     color: white;
-    background-image: url(../imagens/background001.jpg);
-
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.404);
+    background-size: cover; /*faz o background se ajustar ao tamanho da tela*/
+    background-attachment: fixed; /*faz com que a imagem fique estatica dyrante o scroll*/
 }
-section.imagem > p { 
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.247);
+section.imagem > p { /*o p que tiver dentro da div section, com classe imagem receberá isso: */
+    display: inline-block; /*caixa pra se ajustar so texto*/
+    padding: 5px; /*5pixels de espaçamento*/
+    background-color: rgba(0, 0, 0, 0.5); /*caixa preta transparente pra dar destaque em cima da imagem*/
+    text-shadow: 1.5px 1.2px 0px black;
+}
+section#img01 { /*criei um id01 para a classe imagem e ele receberá */
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+    
+}
+section#img02 { /*criei um id02 para a classe imagem e ele receberá: */
+    background-image: url(../imagens/background002.jpg);
+    
 }
 footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 70px;
+    padding: 7px;
 }
