@@ -33,12 +33,12 @@ header > h1 {
 header > p {
     padding-bottom: 50px;
 }
-header a, footer a { /*links do header e footer receberão isso: */
+header a, footer a { /*links (a) do header e footer receberão isso: */
     color: white;
     text-decoration: none;
     font-weight: bolder;
 }
-header a:hover, footer a:hover {
+header a:hover, footer a:hover { /*quando passar o mouse em cima dos links do header e do footer: */
     text-decoration: underline;
 }
 section { /*é sempre melhor colocar as definições CSS dentro das divs pois assim você configura geral ao invés de um de cada*/
