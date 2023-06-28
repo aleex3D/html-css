@@ -15,6 +15,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /*aqui não trás nada visual, só faz com que ele fique apto a ser modificado (mod comportamental)*/
         }
         caption {
             font-size: 1.5em;
@@ -27,8 +28,13 @@
             padding: 10px;
         }
         thead, tfoot {
-            background-color: rgba(26, 26, 26, 0.74);
+            background-color: rgb(53, 53, 53);
             color: white;
+        }
+        thead > tr > th {/*o th que tá dentro do tr, que tá dentro do thead:*/
+            position: sticky; /*faz ele colar*/
+            top: 0; /*aqui faz ele colar na parte 0 do topo, seu início*/
+            background-color: rgb(53, 53, 53);
         }
         tbody > tr:nth-child(odd) { /*2n-1*/
             background-color: rgb(100, 100, 100);
@@ -41,7 +47,7 @@
             font-size: 1em;
             font-family: var(--font2);
         }
-        .num {
+        .num { /*números vão pra direita da coluna*/
             text-align: right;
         }
     </style>
@@ -189,5 +195,56 @@
             </tr>
         </tfoot>
     </table>
+       <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, in! Alias, quam quaerat. Doloribus odit molestias accusantium numquam ut. Alias dolore amet explicabo delectus iure praesentium excepturi odio facere odit?
+           Aliquam, voluptatum! Fuga maiores delectus minus porro temporibus sint aperiam tempore nam quidem natus numquam quam laborum neque sed commodi excepturi reiciendis alias nobis eius dolore libero corporis, corrupti error.
+       </p>
+       <p>
+           Illo laudantium iusto aliquam officia architecto quod minus repellat ab sit, dicta repudiandae doloremque magni ad natus necessitatibus, unde culpa consequatur maxime voluptates voluptatem adipisci? Optio quibusdam saepe ea nulla.
+           Asperiores magnam ea autem pariatur assumenda, ullam eos culpa voluptate! Velit quaerat odit nostrum cumque eligendi iusto sapiente nobis porro quo cupiditate, perspiciatis praesentium dolorum placeat eum error consequatur dolores!
+       </p>
+       <p>
+        Quod dicta labore possimus, ex distinctio placeat explicabo, hic soluta illum autem vel enim fuga, veritatis perspiciatis esse. Architecto quos quod dolores reiciendis ab quasi cum illo? Laudantium, alias magni?
+        Vero deserunt consequatur quis sit aperiam deleniti aspernatur velit eveniet perferendis, similique blanditiis, temporibus error. Sequi blanditiis laborum sed dolorum vero pariatur animi eligendi dolorem, esse tempore error, molestias accusantium.
+    </p>
+    <p>Corrupti, mollitia aliquid alias saepe placeat fugiat, expedita, accusamus illo consequatur quisquam doloribus asperiores voluptatum debitis laboriosam nemo qui itaque. Omnis quae, veritatis dignissimos enim nisi tempora similique corrupti iste.</p>
+    <p>Perspiciatis quisquam inventore odit, dolores quo nam eius et magni doloremque alias sit voluptatibus deserunt repellat, dolore laudantium excepturi cupiditate ut nisi obcaecati! Impedit dicta laboriosam placeat possimus quisquam saepe!</p>
+    <p>Ad ut alias omnis exercitationem fuga explicabo est facilis deleniti nihil! Amet explicabo laborum dolore atque quia natus, ullam rerum in ea sed ratione incidunt doloremque ipsum eaque repellat obcaecati.</p><p>
+        Quod dicta labore possimus, ex distinctio placeat explicabo, hic soluta illum autem vel enim fuga, veritatis perspiciatis esse. Architecto quos quod dolores reiciendis ab quasi cum illo? Laudantium, alias magni?
+        Vero deserunt consequatur quis sit aperiam deleniti aspernatur velit eveniet perferendis, similique blanditiis, temporibus error. Sequi blanditiis laborum sed dolorum vero pariatur animi eligendi dolorem, esse tempore error, molestias accusantium.
+    </p>
+    <p>Corrupti, mollitia aliquid alias saepe placeat fugiat, expedita, accusamus illo consequatur quisquam doloribus asperiores voluptatum debitis laboriosam nemo qui itaque. Omnis quae, veritatis dignissimos enim nisi tempora similique corrupti iste.</p>
+    <p>Perspiciatis quisquam inventore odit, dolores quo nam eius et magni doloremque alias sit voluptatibus deserunt repellat, dolore laudantium excepturi cupiditate ut nisi obcaecati! Impedit dicta laboriosam placeat possimus quisquam saepe!</p>
+    <p>Ad ut alias omnis exercitationem fuga explicabo est facilis deleniti nihil! Amet explicabo laborum dolore atque quia natus, ullam rerum in ea sed ratione incidunt doloremque ipsum eaque repellat obcaecati.</p><p>
+        Quod dicta labore possimus, ex distinctio placeat explicabo, hic soluta illum autem vel enim fuga, veritatis perspiciatis esse. Architecto quos quod dolores reiciendis ab quasi cum illo? Laudantium, alias magni?
+        Vero deserunt consequatur quis sit aperiam deleniti aspernatur velit eveniet perferendis, similique blanditiis, temporibus error. Sequi blanditiis laborum sed dolorum vero pariatur animi eligendi dolorem, esse tempore error, molestias accusantium.
+    </p>
+    <p>Corrupti, mollitia aliquid alias saepe placeat fugiat, expedita, accusamus illo consequatur quisquam doloribus asperiores voluptatum debitis laboriosam nemo qui itaque. Omnis quae, veritatis dignissimos enim nisi tempora similique corrupti iste.</p>
+    <p>Perspiciatis quisquam inventore odit, dolores quo nam eius et magni doloremque alias sit voluptatibus deserunt repellat, dolore laudantium excepturi cupiditate ut nisi obcaecati! Impedit dicta laboriosam placeat possimus quisquam saepe!</p>
+    <p>Ad ut alias omnis exercitationem fuga explicabo est facilis deleniti nihil! Amet explicabo laborum dolore atque quia natus, ullam rerum in ea sed ratione incidunt doloremque ipsum eaque repellat obcaecati.</p><p>
+        Quod dicta labore possimus, ex distinctio placeat explicabo, hic soluta illum autem vel enim fuga, veritatis perspiciatis esse. Architecto quos quod dolores reiciendis ab quasi cum illo? Laudantium, alias magni?
+        Vero deserunt consequatur quis sit aperiam deleniti aspernatur velit eveniet perferendis, similique blanditiis, temporibus error. Sequi blanditiis laborum sed dolorum vero pariatur animi eligendi dolorem, esse tempore error, molestias accusantium.
+    </p>
+    <p>Corrupti, mollitia aliquid alias saepe placeat fugiat, expedita, accusamus illo consequatur quisquam doloribus asperiores voluptatum debitis laboriosam nemo qui itaque. Omnis quae, veritatis dignissimos enim nisi tempora similique corrupti iste.</p>
+    <p>Perspiciatis quisquam inventore odit, dolores quo nam eius et magni doloremque alias sit voluptatibus deserunt repellat, dolore laudantium excepturi cupiditate ut nisi obcaecati! Impedit dicta laboriosam placeat possimus quisquam saepe!</p>
+    <p>Ad ut alias omnis exercitationem fuga explicabo est facilis deleniti nihil! Amet explicabo laborum dolore atque quia natus, ullam rerum in ea sed ratione incidunt doloremque ipsum eaque repellat obcaecati.</p><p>
+        Quod dicta labore possimus, ex distinctio placeat explicabo, hic soluta illum autem vel enim fuga, veritatis perspiciatis esse. Architecto quos quod dolores reiciendis ab quasi cum illo? Laudantium, alias magni?
+        Vero deserunt consequatur quis sit aperiam deleniti aspernatur velit eveniet perferendis, similique blanditiis, temporibus error. Sequi blanditiis laborum sed dolorum vero pariatur animi eligendi dolorem, esse tempore error, molestias accusantium.
+    </p>
+    <p>Corrupti, mollitia aliquid alias saepe placeat fugiat, expedita, accusamus illo consequatur quisquam doloribus asperiores voluptatum debitis laboriosam nemo qui itaque. Omnis quae, veritatis dignissimos enim nisi tempora similique corrupti iste.</p>
+    <p>Perspiciatis quisquam inventore odit, dolores quo nam eius et magni doloremque alias sit voluptatibus deserunt repellat, dolore laudantium excepturi cupiditate ut nisi obcaecati! Impedit dicta laboriosam placeat possimus quisquam saepe!</p>
+    <p>Ad ut alias omnis exercitationem fuga explicabo est facilis deleniti nihil! Amet explicabo laborum dolore atque quia natus, ullam rerum in ea sed ratione incidunt doloremque ipsum eaque repellat obcaecati.</p><p>
+        Quod dicta labore possimus, ex distinctio placeat explicabo, hic soluta illum autem vel enim fuga, veritatis perspiciatis esse. Architecto quos quod dolores reiciendis ab quasi cum illo? Laudantium, alias magni?
+        Vero deserunt consequatur quis sit aperiam deleniti aspernatur velit eveniet perferendis, similique blanditiis, temporibus error. Sequi blanditiis laborum sed dolorum vero pariatur animi eligendi dolorem, esse tempore error, molestias accusantium.
+    </p>
+    <p>Corrupti, mollitia aliquid alias saepe placeat fugiat, expedita, accusamus illo consequatur quisquam doloribus asperiores voluptatum debitis laboriosam nemo qui itaque. Omnis quae, veritatis dignissimos enim nisi tempora similique corrupti iste.</p>
+    <p>Perspiciatis quisquam inventore odit, dolores quo nam eius et magni doloremque alias sit voluptatibus deserunt repellat, dolore laudantium excepturi cupiditate ut nisi obcaecati! Impedit dicta laboriosam placeat possimus quisquam saepe!</p>
+    <p>Ad ut alias omnis exercitationem fuga explicabo est facilis deleniti nihil! Amet explicabo laborum dolore atque quia natus, ullam rerum in ea sed ratione incidunt doloremque ipsum eaque repellat obcaecati.</p><p>
+        Quod dicta labore possimus, ex distinctio placeat explicabo, hic soluta illum autem vel enim fuga, veritatis perspiciatis esse. Architecto quos quod dolores reiciendis ab quasi cum illo? Laudantium, alias magni?
+        Vero deserunt consequatur quis sit aperiam deleniti aspernatur velit eveniet perferendis, similique blanditiis, temporibus error. Sequi blanditiis laborum sed dolorum vero pariatur animi eligendi dolorem, esse tempore error, molestias accusantium.
+    </p>
+    <p>Corrupti, mollitia aliquid alias saepe placeat fugiat, expedita, accusamus illo consequatur quisquam doloribus asperiores voluptatum debitis laboriosam nemo qui itaque. Omnis quae, veritatis dignissimos enim nisi tempora similique corrupti iste.</p>
+    <p>Perspiciatis quisquam inventore odit, dolores quo nam eius et magni doloremque alias sit voluptatibus deserunt repellat, dolore laudantium excepturi cupiditate ut nisi obcaecati! Impedit dicta laboriosam placeat possimus quisquam saepe!</p>
+    <p>Ad ut alias omnis exercitationem fuga explicabo est facilis deleniti nihil! Amet explicabo laborum dolore atque quia natus, ullam rerum in ea sed ratione incidunt doloremque ipsum eaque repellat obcaecati.</p>
 </body>
 </html>
