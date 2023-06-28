@@ -26,6 +26,15 @@
             background-color: rgba(26, 26, 26, 0.74);
             color: white;
         }
+        tbody > tr:nth-child(odd) { /*2n-1*/
+            background-color: aquamarine;
+            color: rgb(107, 107, 107);
+        }
+        /*pode usar também odd ou even, assim como colocar 1n/2n/3n+1/+2/-1/-2... */
+        tbody > tr:nth-child(even) {/*2n*/
+            background-color: antiquewhite;
+            font-weight: bold;
+        }
         .num {
             text-align: right;
         }
