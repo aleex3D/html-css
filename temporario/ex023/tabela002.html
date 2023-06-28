@@ -47,9 +47,12 @@
         //Não é necessário ter cabeça ou pé, mas é bom pra semântica
     -->
     <table>
-        <caption>População das Unidades Federativas</caption>
+        <caption>População das Unidades Federativas</caption> 
+        <!--Titulo da tabela-->
         <thead>
             <tr>
+                <!-- scope="col" serve para titulos da coluna, ex: 
+                no jogo Stop, isso seria "nome, cep, minha sogra é, e etc" -->
                 <th scope="col">Estado</th>
                 <th scope="col" style="width: 50px;">População</th>
             </tr>
@@ -165,6 +168,7 @@
             </tr>
         <tfoot>
             <tr>
+                <!-- scope="row" é titúlo da mesma linha, pois o número de habitantes está na mesma linha-->
                 <th scope="row">Total de Habitantes</th>
                 <th class="num"><strong>210.147.125</strong></th>
             </tr>
